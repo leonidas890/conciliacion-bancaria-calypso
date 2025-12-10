@@ -1,0 +1,76 @@
+================================================================================
+  CREAR REPOSITORIO EN GITHUB AUTOMATICAMENTE
+  Usuario: leonidas890
+  Correo: leonidasdiaz82@gmail.com
+================================================================================
+
+PASO 1: Obtener Token de GitHub
+--------------------------------
+1. Ve a: https://github.com/settings/tokens
+2. Click en "Generate new token (classic)"
+3. Nombre: "Conciliacion Bancaria CALYPSO"
+4. Selecciona el scope: "repo" (acceso completo a repositorios)
+5. Click "Generate token"
+6. COPIA EL TOKEN (solo se muestra una vez)
+
+IMPORTANTE: Asegurate de estar logueado con la cuenta:
+  Correo: leonidasdiaz82@gmail.com
+  Usuario: leonidas890
+
+PASO 2: Ejecutar Script
+------------------------
+Windows:
+  -> Doble clic en: crear_repo_github.bat
+  O
+  -> python crear_repositorio_github.py
+
+Linux/Mac:
+  -> python3 crear_repositorio_github.py
+
+PASO 3: Ingresar Token
+----------------------
+Cuando el script lo solicite, pega el token que copiaste
+
+PASO 4: ¡Listo!
+---------------
+El script automaticamente:
+  - Configurara git con tu correo: leonidasdiaz82@gmail.com
+  - Creara el repositorio en: https://github.com/leonidas890/conciliacion-bancaria-calypso
+  - Subira todo el codigo
+
+================================================================================
+  ALTERNATIVA: Usar Variable de Entorno
+================================================================================
+
+Si prefieres no ingresar el token cada vez:
+
+Windows (PowerShell):
+  $env:GITHUB_TOKEN="tu_token_aqui"
+  python crear_repositorio_github.py
+
+Windows (CMD):
+  set GITHUB_TOKEN=tu_token_aqui
+  python crear_repositorio_github.py
+
+Linux/Mac:
+  export GITHUB_TOKEN="tu_token_aqui"
+  python3 crear_repositorio_github.py
+
+================================================================================
+  DESPUES DE CREAR EL REPOSITORIO
+================================================================================
+
+Una vez creado el repositorio, para desplegar en Streamlit Cloud:
+
+1. Ve a: https://share.streamlit.io/
+2. Inicia sesion con GitHub (usando leonidasdiaz82@gmail.com)
+3. Click "New app"
+4. Repositorio: leonidas890/conciliacion-bancaria-calypso
+5. Main file: app.py
+6. Click "Deploy"
+
+Tu aplicacion estara en linea en minutos!
+
+Link de tu app: https://leonidas890-conciliacion-bancaria-calypso.streamlit.app
+
+================================================================================

@@ -1,0 +1,130 @@
+================================================================================
+  CONCILIACION BANCARIA CALYPSO - INSTRUCCIONES COMPLETAS
+  UN MUNDO DE SOLUCIONES
+================================================================================
+
+================================================================================
+  OPCION 1: APLICACION DE ESCRITORIO (LOCAL)
+================================================================================
+
+PASO 1: Configuracion Automatica
+---------------------------------
+Ejecuta uno de estos comandos:
+
+  Windows:
+    python setup_completo.py
+    O
+    deploy_automatico.bat
+
+  Linux/Mac:
+    python3 setup_completo.py
+
+PASO 2: Iniciar Aplicacion
+---------------------------
+  Windows:
+    -> Doble clic en: Iniciar_Aplicacion.bat
+    
+  Linux/Mac:
+    -> Ejecuta: ./Iniciar_Aplicacion.sh
+
+PASO 3: Usar
+------------
+  - La aplicacion se abrira automaticamente en tu navegador
+  - URL: http://localhost:8501
+  - Funciona completamente offline
+  - Todos los datos se procesan localmente
+
+================================================================================
+  OPCION 2: APLICACION WEB EN LINEA (CON LINK PUBLICO)
+================================================================================
+
+METODO A: Streamlit Cloud (GRATIS - RECOMENDADO)
+-------------------------------------------------
+
+1. Crear cuenta en GitHub (si no tienes):
+   https://github.com/signup
+
+2. Subir codigo a GitHub:
+   - Crea un nuevo repositorio
+   - Sube todos los archivos del proyecto
+   - Asegurate de incluir: app.py, requirements.txt
+
+3. Conectar con Streamlit Cloud:
+   - Ve a: https://share.streamlit.io/
+   - Inicia sesion con tu cuenta de GitHub
+   - Click en "New app"
+   - Selecciona tu repositorio
+   - Main file path: app.py
+   - Python version: 3.9 o superior
+   - Click "Deploy"
+
+4. Tu aplicacion estara disponible en:
+   https://tu-usuario-conciliacion-bancaria.streamlit.app
+
+5. Compartir:
+   - Puedes compartir este link con cualquier persona
+   - No necesitan instalar nada
+   - Solo abren el link en su navegador
+
+METODO B: Tu Propio Servidor
+-----------------------------
+
+1. En tu servidor, ejecuta:
+   pip install -r requirements.txt
+   streamlit run app.py --server.port 8501 --server.address 0.0.0.0
+
+2. Accede desde: http://tu-servidor:8501
+
+METODO C: Docker
+----------------
+
+1. Construir imagen:
+   docker build -t conciliacion-bancaria .
+
+2. Ejecutar contenedor:
+   docker run -p 8501:8501 conciliacion-bancaria
+
+3. Acceder: http://localhost:8501
+
+================================================================================
+  ARCHIVOS IMPORTANTES
+================================================================================
+
+- app.py                    -> Aplicacion principal
+- Iniciar_Aplicacion.bat    -> Launcher para Windows
+- setup_completo.py         -> Configuracion automatica
+- deploy_automatico.bat     -> Despliegue automatico completo
+- requirements.txt          -> Dependencias de Python
+- STREAMLIT_CLOUD.md        -> Guia detallada para Streamlit Cloud
+- DEPLOY.md                 -> Guia completa de despliegue
+
+================================================================================
+  SOLUCION DE PROBLEMAS
+================================================================================
+
+Error: "No module named 'streamlit'"
+  Solucion: pip install -r requirements.txt
+
+Error: "Port already in use"
+  Solucion: Cambia el puerto en Iniciar_Aplicacion.bat (cambia 8501 por otro)
+
+La aplicacion no se abre automaticamente
+  Solucion: Abre manualmente http://localhost:8501 en tu navegador
+
+Error al procesar archivos Excel
+  Solucion: Verifica que los archivos tengan columnas de fecha y monto
+
+================================================================================
+  CARACTERISTICAS
+================================================================================
+
+✓ Conciliacion automatica por Fecha y PV
+✓ Soporte para archivos Excel con multiples hojas
+✓ Deteccion automatica de columnas
+✓ Exportacion con formato preservado
+✓ Indicadores visuales de cruces
+✓ Interfaz elegante y moderna
+✓ Logo CALYPSO oficial
+
+================================================================================
+

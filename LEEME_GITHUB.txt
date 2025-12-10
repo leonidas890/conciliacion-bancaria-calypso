@@ -1,0 +1,59 @@
+================================================================================
+  CREAR REPOSITORIO EN GITHUB - INSTRUCCIONES
+================================================================================
+
+El script necesita un TOKEN de GitHub para crear el repositorio.
+
+OPCION 1: Ejecutar manualmente (RECOMENDADO)
+---------------------------------------------
+1. Abre una terminal/CMD en esta carpeta
+2. Ejecuta: python crear_repositorio_github.py
+3. Cuando te pida el token, pegalo y presiona Enter
+
+OPCION 2: Usar variable de entorno
+-----------------------------------
+1. Obtén tu token de GitHub:
+   https://github.com/settings/tokens
+
+2. En CMD/PowerShell, ejecuta:
+   set GITHUB_TOKEN=tu_token_aqui
+   
+3. Luego ejecuta:
+   crear_repo_con_token.bat
+
+OPCION 3: Crear repositorio manualmente
+---------------------------------------
+1. Ve a: https://github.com/new
+2. Nombre: conciliacion-bancaria-calypso
+3. Descripción: Aplicación de Conciliación Bancaria Automática - CALYPSO
+4. Público
+5. NO marques "Initialize with README"
+6. Click "Create repository"
+
+7. Luego en tu terminal:
+   git init
+   git config user.email "leonidasdiaz82@gmail.com"
+   git config user.name "leonidas890"
+   git add .
+   git commit -m "Initial commit: Conciliacion Bancaria CALYPSO"
+   git branch -M main
+   git remote add origin https://github.com/leonidas890/conciliacion-bancaria-calypso.git
+   git push -u origin main
+
+================================================================================
+  OBTENER TOKEN DE GITHUB
+================================================================================
+
+1. Ve a: https://github.com/settings/tokens
+2. Click "Generate new token (classic)"
+3. Nombre: "Conciliacion Bancaria CALYPSO"
+4. Selecciona: repo (acceso completo)
+5. Click "Generate token"
+6. COPIA EL TOKEN (solo se muestra una vez)
+
+IMPORTANTE: Asegúrate de estar logueado con:
+  Correo: leonidasdiaz82@gmail.com
+  Usuario: leonidas890
+
+================================================================================
+

@@ -1,0 +1,62 @@
+================================================================================
+                    CONCILIACION BANCARIA CALYPSO
+                         UN MUNDO DE SOLUCIONES
+================================================================================
+
+¡BIENVENIDO! Esta aplicacion esta lista para usar de dos formas:
+
+================================================================================
+  FORMA 1: APLICACION DE ESCRITORIO (MAS RAPIDO)
+================================================================================
+
+1. Ejecuta: deploy_automatico.bat
+   (O doble clic en: Iniciar_Aplicacion.bat)
+
+2. La aplicacion se abrira automaticamente en tu navegador
+
+3. ¡Listo para usar!
+
+================================================================================
+  FORMA 2: APLICACION WEB EN LINEA (CON LINK)
+================================================================================
+
+1. Sube este proyecto a GitHub
+
+2. Ve a: https://share.streamlit.io/
+
+3. Conecta tu repositorio y despliega
+
+4. Obtendras un link publico como:
+   https://tu-app.streamlit.app
+
+5. Comparte el link con quien quieras
+
+================================================================================
+  ARCHIVOS IMPORTANTES
+================================================================================
+
+-> Iniciar_Aplicacion.bat    (Para iniciar la app de escritorio)
+-> deploy_automatico.bat     (Configuracion automatica completa)
+-> setup_completo.py         (Script de configuracion)
+-> STREAMLIT_CLOUD.md        (Guia para desplegar en linea)
+-> INSTRUCCIONES_COMPLETAS.txt (Guia detallada completa)
+
+================================================================================
+  AYUDA RAPIDA
+================================================================================
+
+Problema: No inicia
+Solucion: Ejecuta: python setup_completo.py
+
+Problema: Faltan dependencias
+Solucion: pip install -r requirements.txt
+
+Problema: Puerto ocupado
+Solucion: Cambia el puerto en Iniciar_Aplicacion.bat
+
+================================================================================
+
+Para mas informacion, lee: INSTRUCCIONES_COMPLETAS.txt
+
+================================================================================
+

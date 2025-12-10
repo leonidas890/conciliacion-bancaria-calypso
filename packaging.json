@@ -1,0 +1,20 @@
+{
+  "name": "Conciliacion Bancaria CALYPSO",
+  "version": "1.0.0",
+  "description": "Aplicacion de conciliacion bancaria automatica",
+  "main": "app.py",
+  "scripts": {
+    "start": "streamlit run app.py",
+    "desktop": "python create_desktop_app.py",
+    "build": "python build_desktop.py"
+  },
+  "keywords": [
+    "conciliacion",
+    "bancaria",
+    "excel",
+    "calypso"
+  ],
+  "author": "CALYPSO",
+  "license": "MIT"
+}
+

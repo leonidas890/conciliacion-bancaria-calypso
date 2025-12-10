@@ -16,6 +16,14 @@ st.set_page_config(
     layout="wide"
 )
 
+# Inicializar session_state para evitar errores de DOM
+if 'results' not in st.session_state:
+    st.session_state['results'] = None
+if 'sheet_names' not in st.session_state:
+    st.session_state['sheet_names'] = None
+if 'original_files_data' not in st.session_state:
+    st.session_state['original_files_data'] = {}
+
 # Estilos CSS personalizados - Diseño elegante y moderno
 st.markdown("""
 <style>
@@ -1144,7 +1152,8 @@ def main():
                                   - 📅 Por Fecha+Monto: {len(fecha_monto)}
                                 - ❌ No conciliados: {len(results) - len(conciliados)}
                                 """)
-                                st.rerun()
+                                # Evitar st.rerun() que puede causar errores de DOM
+                                # Los resultados se mostrarán automáticamente en la siguiente sección
                             except Exception as e:
                                 st.error(f"❌ Error al procesar el archivo: {str(e)}")
                                 import traceback
@@ -1222,7 +1231,8 @@ def main():
                       - Por Fecha+Monto: {len(fecha_monto)}
                     - No conciliados: {len(results) - len(conciliados)}
                     """)
-                    st.rerun()
+                    # Evitar st.rerun() que puede causar errores de DOM
+                    # Los resultados se mostrarán automáticamente en la siguiente sección
     
     # Mostrar resultados
     if 'results' in st.session_state and st.session_state['results']:
